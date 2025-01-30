@@ -1,7 +1,7 @@
 # Sistema de Gestão de Pedidos - E-commerce
 
 ## Sobre o Projeto
-Este projeto implementa um sistema de gestão de pedidos para e-commerce, desenvolvido em Python utilizando Programação Orientada a Objetos. O sistema permite que clientes realizem pedidos, escolham produtos, apliquem pagamentos e acompanhem o status da entrega.
+Este projeto implementa um sistema de gestão de pedidos para e-commerce, desenvolvido em Python utilizando Programação Orientada a Objetos. O sistema permite que clientes realizem pedidos, escolham produtos, efetuem pagamentos e acompanhem o status da entrega.
 
 ## Requisitos do Sistema
 - Python 3.7+
@@ -28,48 +28,48 @@ ecommerce_project/
 ## Classes Principais
 
 ### Produto
-- Atributos:
-  - id: Identificador único
-  - nome: Nome do produto
-  - preco: Preço unitário
+- **Atributos:**
+  - `id`: Identificador único
+  - `nome`: Nome do produto
+  - `preco`: Preço unitário
 
 ### Cliente
-- Atributos:
-  - id: Identificador único
-  - nome: Nome do cliente
-  - endereco: Endereço de entrega
-  - historico_pedidos: Lista de pedidos anteriores
-- Métodos:
-  - adicionar_pedido(): Associa um pedido ao cliente
+- **Atributos:**
+  - `id`: Identificador único
+  - `nome`: Nome do cliente
+  - `endereco`: Endereço de entrega
+  - `historico_pedidos`: Lista de pedidos anteriores
+- **Métodos:**
+  - `adicionar_pedido()`: Associa um pedido ao cliente
 
 ### Pedido
-- Atributos:
-  - id: Identificador único
-  - cliente: Cliente que fez o pedido
-  - itens: Lista de produtos comprados
-  - status: Estado atual do pedido (Aguardando Pagamento/Pago/Enviado/Entregue)
-  - valor_total: Soma dos preços dos produtos
-- Métodos:
-  - adicionar_produto(): Adiciona itens ao pedido
-  - calcular_total(): Retorna o valor total do pedido
-  - atualizar_status(): Atualiza o status do pedido
+- **Atributos:**
+  - `id`: Identificador único
+  - `cliente`: Cliente que fez o pedido
+  - `itens`: Lista de produtos comprados
+  - `status`: Estado atual do pedido (Aguardando Pagamento, Pago, Enviado, Entregue)
+  - `valor_total`: Soma dos preços dos produtos
+- **Métodos:**
+  - `adicionar_produto()`: Adiciona itens ao pedido
+  - `calcular_total()`: Retorna o valor total do pedido
+  - `atualizar_status()`: Atualiza o status do pedido
 
 ### Pagamento
-- Atributos:
-  - pedido: Pedido associado ao pagamento
-  - metodo: Tipo de pagamento (Cartão/Boleto/Pix)
-  - status_pagamento: Estado do pagamento (Aguardando/Aprovado/Recusado)
-- Métodos:
-  - processar_pagamento(): Simula o processamento do pagamento
+- **Atributos:**
+  - `pedido`: Pedido associado ao pagamento
+  - `metodo`: Tipo de pagamento (Cartão, Boleto, Pix)
+  - `status_pagamento`: Estado do pagamento (Aguardando, Aprovado, Recusado)
+- **Métodos:**
+  - `processar_pagamento()`: Simula o processamento do pagamento
 
 ### Entrega
-- Atributos:
-  - pedido: Pedido sendo entregue
-  - status_entrega: Estado da entrega (Aguardando Envio/Em Transporte/Entregue)
-  - codigo_rastreamento: Código único para rastreamento
-- Métodos:
-  - iniciar_entrega(): Define o status como "Em Transporte"
-  - finalizar_entrega(): Define o status como "Entregue"
+- **Atributos:**
+  - `pedido`: Pedido sendo entregue
+  - `status_entrega`: Estado da entrega (Aguardando Envio, Em Transporte, Entregue)
+  - `codigo_rastreamento`: Código único para rastreamento
+- **Métodos:**
+  - `iniciar_entrega()`: Define o status como "Em Transporte"
+  - `finalizar_entrega()`: Define o status como "Entregue"
 
 ## Instalação e Configuração
 
@@ -100,11 +100,11 @@ pip install -r requirements.txt
 ### Testes Automatizados
 Para executar os testes:
 ```bash
-python -m pytest src/tests/
+python -m pytest tests/
 ```
 
 ### Demonstração do Sistema
-Para executar o exemplo de uso:
+Para executar um exemplo de uso:
 ```bash
 python main.py
 ```
@@ -128,14 +128,14 @@ python main.py
 - Acompanhamento de status
 
 ### Sistema de Pagamento
-- Múltiplos métodos (Cartão, Boleto, Pix)
+- Suporte a múltiplos métodos (Cartão, Boleto, Pix)
 - Simulação de processamento
 - Validação de status
 
 ### Sistema de Entrega
 - Geração de código de rastreamento
 - Acompanhamento de status
-- Validações de regras de negócio
+- Validação de regras de negócio
 
 ## Regras de Negócio Implementadas
 
@@ -154,7 +154,6 @@ python main.py
 5. Fluxo completo de entrega
 6. Validações de regras de negócio
 7. Tratamento de erros
-
 
 ## Observações Importantes
 
